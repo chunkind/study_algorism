@@ -1,0 +1,6 @@
+echo compile starting...
+javac -cp ./bin -d ./bin src/util/*.java
+javac -cp ./bin -d ./bin src/study/day02/q01/PrimeNumber.java
+javac -cp ./bin -d ./bin src/study/day02/Start.java
+echo service starting...
+java -cp ./bin study.day02.Start
