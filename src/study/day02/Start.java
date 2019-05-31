@@ -2,6 +2,7 @@ package study.day02;
 
 import study.day02.q01.PrimeNumber;
 import study.day02.q02.DayCount;
+import study.day02.q03.DaysLeft;
 
 import java.util.*;
 
@@ -11,12 +12,10 @@ public class Start{
 		int num = 0;
 		int param = 0;
 		Scanner sc = new Scanner(System.in);
-		
-
-		System.out.println("입력한 수 : " + param);
 		do{
 			System.out.println("1.입력한 수 이하의 소수 구하기.");
 			System.out.println("2.초과일 구하기.");
+			System.out.println("3.남은일 구하기.");
 			num = sc.nextInt();
 			switch(num){
 				case 1:
@@ -33,9 +32,13 @@ public class Start{
 					DayCount p02 = new DayCount();
 					p02.process();
 					break;
+				case 3:
+					DaysLeft p03 = new DaysLeft();
+					p03.process();
+					break;
 			}
 			System.out.println("실행할 프로그램 번호를 입력 하세요.");
-		}while(num>0 && num<3);
+		}while(num>0 && num<=3);
 	}
 
 }
