@@ -1,8 +1,8 @@
-package study.day01.q07;
+package study.bj;
 
 import java.util.Scanner;
 
-public class P3046{
+public class Q3046{
 	public void process(){
 		Scanner sc = new Scanner(System.in);
 
