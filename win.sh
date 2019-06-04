@@ -7,6 +7,7 @@ javac -cp ./bin -d ./bin src/util/*.java
 #javac -cp ./bin -d ./bin src/study/day02/*.java
 
 javac -cp ./bin -d ./bin src/study/day03/q01/*.java
+javac -cp ./bin -d ./bin src/study/day03/q02/*.java
 javac -cp ./bin -d ./bin src/study/day03/*.java
 
 echo service starting...
