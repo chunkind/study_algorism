@@ -9,6 +9,7 @@ public class Start{
 		do{
 			System.out.println("1.R2");
 			System.out.println("2.설탕배달");
+			System.out.println("3.하얀 칸");
 			num = sc.nextInt();
 			switch(num){
 				case 1:
@@ -19,8 +20,12 @@ public class Start{
 					Q2839 q2839 = new Q2839();
 					q2839.process();
 					break;
+				case 3:
+					Q1100 q1100 = new Q1100();
+					q1100.process();
+					break;
 			}
 			System.out.println("실행할 프로그램 번호를 입력 하세요.");
-		}while(num>0 && num<=2);
+		}while(num>0 && num<=3);
 	}
 }

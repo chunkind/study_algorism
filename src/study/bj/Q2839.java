@@ -9,6 +9,6 @@ public class Q2839{
 		do{
 			System.out.println("봉지에 담을 양을 넣으세요");
 			num = sc.nextInt();
-		}while(num<3 || num>5000)
+		}while(num<3 || num>5000);
 	}
 }
