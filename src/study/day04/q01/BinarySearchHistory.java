@@ -18,8 +18,37 @@ public class BinarySearchHistory{
 		int pr = n - 1; // 검색범위 맨 뒤의 index
 
 		//아래 코드를 추가하여 완성 하세요.
-		
+		do {
+			int pc = (pr - pl) / 2;
+			System.out.printf("   |");
+			if(pl != pc){
+				
+			}
+		} while (pl <= pr);
 		return -1; // 검색실패
+	}
+
+	public void real(){
+		int pc = (pl + pr) / 2; // 중앙요소의 index
+		System.out.print("   |");
+		if (pl != pc)
+			System.out.printf(String.format("%%%ds<-%%%ds+", (pl * 4) + 1, (pc - pl) * 4), "", "");
+		else
+			System.out.printf(String.format("%%%ds<-+", pc * 4 + 1), "");
+		if (pc != pr)
+			System.out.printf(String.format("%%%ds->\n", (pr - pc) * 4 - 2), "");
+		else
+			System.out.println("->");
+		System.out.printf("%3d|", pc);
+		for (int k = 0; k < n; k++)
+			System.out.printf("%4d", a[k]);
+		System.out.println("\n   |");
+		if (a[pc] == key)
+			return pc; // 검색성공
+		else if (a[pc] < key)
+			pl = pc + 1; // 검색범위를 뒤쪽 절반으로 좁힘
+		else
+			pr = pc - 1; // 검색범위를 앞쪽 절반으로 좁힘
 	}
 
 	public void process() {

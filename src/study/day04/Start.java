@@ -5,6 +5,11 @@ import study.day04.q01.BinarySearchHistory;
 import java.util.*;
 
 public class Start{
+//	public static void main(String[] args){
+//		System.out.printf("%s" + String.format("%%%ds",4) + "%s","S","","E");
+//		System.out.printf("%s" + String.format("%%%ds",4) + "%s","S"," ","E");
+//	}
+
 	public static void main(String[] args){
 		int num = 0;
 		Scanner sc = new Scanner(System.in);
