@@ -28,8 +28,4 @@ public class SW2001_파리퇴치 {
 		}
 		
 	}
-	
-	public static void setInput() {
-		
-	}
 }

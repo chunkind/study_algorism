@@ -1,10 +1,10 @@
 package sw.day01.sw1986;
 
 public class SW1986_지그재그_숫자 {
+	static int[] input = {2, 5, 6};
+	static int[] output = new int[input[0]];
+	
 	public static void main(String[] args) {
-		int[] input = {2, 5, 6};
-		int[] output = new int[input[0]];
-		
 		for(int i=1; i<=input[0]; i++) {
 			if(input[i] < 1 || input[i]>10) {
 				System.out.println("n은 1이상 10이하");
@@ -21,4 +21,5 @@ public class SW1986_지그재그_숫자 {
 			System.out.printf("#%d %d\n", i+1, output[i]);
 		}
 	}
+	
 }
