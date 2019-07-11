@@ -1,5 +1,7 @@
 package util;
 
+import java.util.Scanner;
+
 public class Util{
 	//int 배열 추가
 	public static int[] addIntArr(int[] orgArr, int n){
@@ -25,6 +27,18 @@ public class Util{
 			System.out.println(arrInt[i]);
 		}
 		System.out.println("==end list==");
+	}
+	
+	public static int[] getInputArr() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("반복 횟수 입력");
+		int n = sc.nextInt();
+		int[] result = new int[n];
+		for(int i=0; i<n; i++) {
+			System.out.println("입력 값 입력");
+			result[i] = sc.nextInt();
+		}
+		return result;
 	}
 	
 }

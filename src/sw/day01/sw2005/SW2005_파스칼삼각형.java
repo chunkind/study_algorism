@@ -4,13 +4,14 @@ import java.util.Scanner;
 
 public class SW2005_파스칼삼각형 {
 	static Scanner sc = new Scanner(System.in);
-	static int t = 0;
 	static int[][] arry = null;
-	static int[] n = null;
 	
 	public static void main(String[] agrs) {
-		//값입력
-		intputValue();
+		int t = sc.nextInt();
+		int[] n = new int[t];
+		for(int i=0; i<t; i++) {
+			n[i] = sc.nextInt();
+		}
 		
 		for(int q=0; q<n.length; q++) {
 			arry = new int[n[q]][n[q]];
@@ -31,19 +32,6 @@ public class SW2005_파스칼삼각형 {
 			}
 		}
 		
-	}
-	
-	public static void intputValue() {
-		do {
-			System.out.println("1이상 10이하 정수를 입력.");
-			t = sc.nextInt();
-			n = new int[t];
-		} while (t > 11 || t < 1);
-
-		for(int i=0; i<t; i++) {
-			System.out.println("정삼각형의 길이를 입력.");
-			n[i] = sc.nextInt();
-		}
 	}
 	
 	public static int getCnt(int x, int y) {
