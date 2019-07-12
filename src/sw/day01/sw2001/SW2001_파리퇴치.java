@@ -11,22 +11,9 @@ public class SW2001_파리퇴치 {
         int[][] arry = new int[N][N];
         for(int i=0; i<N; i++) {
             for(int j=0; j<N; j++) {
-            	int num = 0;
-            	while(true) {
-            		num = sc.nextInt();
-            		if(num > 0 && num < 30) break;
-            	}
-            	arry[i][j] = num; 
-            	System.out.printf("arry[%d][%d] : %d\n", i, j, num);
+            	arry[i][j] = sc.nextInt(); 
             }
         }
-        
-        for(int i=0; i<arry.length; i++) {
-			for(int j=0; j<arry[i].length; j++) {
-				System.out.print(arry[i][j] + " ");
-			}
-			System.out.println();
-		}
 		for(int i=0; i<T; i++) {
 			int max = 0;
 			int sum = 0;
