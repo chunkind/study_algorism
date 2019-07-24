@@ -2,7 +2,7 @@ package sw.day02.sw1984;
 
 import java.util.Scanner;
 
-public class SW1984_중간_평균값_구하기 {
+public class 중간_평균값_구하기 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();

@@ -2,7 +2,7 @@ package sw.day01.sw2001;
 
 import java.util.Scanner;
 
-public class SW2001_파리퇴치 {
+public class 파리퇴치 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();

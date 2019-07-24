@@ -2,7 +2,7 @@ package sw.day01.sw2005;
 
 import java.util.Scanner;
 
-public class SW2005_파스칼삼각형 {
+public class 파스칼삼각형 {
 	static Scanner sc = new Scanner(System.in);
 	static int[][] arry = null;
 	

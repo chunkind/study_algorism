@@ -2,7 +2,7 @@ package sw.day01.sw2007;
 
 import java.util.Scanner;
 
-public class SW2007_패턴_마디의_길이2 {
+public class 패턴_마디의_길이2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();

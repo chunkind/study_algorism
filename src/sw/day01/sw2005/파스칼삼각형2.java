@@ -2,7 +2,7 @@ package sw.day01.sw2005;
 
 import java.util.Scanner;
 
-public class SW2005_파스칼삼각형2 {
+public class 파스칼삼각형2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt(); // 1

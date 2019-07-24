@@ -2,7 +2,7 @@ package sw.day01.sw1926;
 
 import java.util.Scanner;
 
-public class SW1926_간단한_369게임2 {
+public class 간단한_369게임2 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
       int N = sc.nextInt();

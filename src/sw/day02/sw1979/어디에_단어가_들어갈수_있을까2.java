@@ -2,7 +2,7 @@ package sw.day02.sw1979;
 
 import java.util.Scanner;
 
-public class SW1979_어디에_단어가_들어갈수_있을까2 {
+public class 어디에_단어가_들어갈수_있을까2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt(); //테스트의 수
@@ -31,7 +31,7 @@ public class SW1979_어디에_단어가_들어갈수_있을까2 {
 						cnt = 0;
 					}
 					if(arr[b][c] == 1) cnt++;
-				}else {
+				}else{
 					if(cnt == K && arr[c][b] == 0) {
 						searchCnt++;
 						cnt = 0;

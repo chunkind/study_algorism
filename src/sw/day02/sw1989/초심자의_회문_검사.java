@@ -2,7 +2,7 @@ package sw.day02.sw1989;
 
 import java.util.Scanner;
 
-public class SW1989_초심자의_회문_검사 {
+public class 초심자의_회문_검사 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
@@ -17,7 +17,10 @@ public class SW1989_초심자의_회문_검사 {
 				if(c>=0){
 					if(b==c) break;
 					if(input[a].substring(b,b+1).equals(input[a].substring(c,c+1))) temp = true;
-					else temp = false;
+					else {
+						temp = false;
+						break;
+					}
 					c--;
 				}
 			}
