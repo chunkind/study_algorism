@@ -8,9 +8,21 @@ public class 백만_장자_프로젝트 {
 		int t = sc.nextInt();
 		for(int i=0; i<t; i++) {
 			int n = sc.nextInt();
+			int[] input = new int[n];
+			int maxIdx = 0, max = 0, sum = 0, cnt=0;
 			for(int j=0; j<n; j++) {
-				
+				input[j] = sc.nextInt();
+				if(max < input[j]) {
+					max = input[j];
+					maxIdx = j;
+				}
 			}
+			for(int j=0; j<maxIdx+1; j++) {
+				sum -= input[j];
+				cnt++;
+			}
+			for(int j=0; j<cnt; j++) sum += input[maxIdx];
+			System.out.printf("#%d %d\n", i+1, sum);
 		}
 	}
 }

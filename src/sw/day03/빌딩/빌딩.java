@@ -1,7 +1,38 @@
 package sw.day03.빌딩;
 
-public class 빌딩 {
+import java.util.Scanner;
 
+public class 빌딩 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		for(int tc = 1; tc<=t; tc++) {
+			int n = sc.nextInt();
+			char[][] map = new char[n][n];
+			for(int i=0; i<n; i++)
+				for(int j=0; j<n; j++)
+					map[i][j] = sc.next().charAt(0);
+			int max = 0;
+			for(int i=0; i<n; i++)
+				for(int j=0; j<n; j++)
+					if(max < getCnt(map, i, j, n)) max = getCnt(map, i, j, n);
+			System.out.printf("#%d %d\n", tc, max);
+		}
+	}
+	public static int getCnt(char[][] map, int i, int j, int n) {
+		int result = 0;
+		for(int dr = -1; dr<=1; dr++) {
+			for(int dc = -1; dc<=1; dc++) {
+				int row = i +dr;
+				int col = j +dc;
+				if(row>=0 && row<n && col>=0 && col<n) {
+					if(map[row][col]=='B') result++;
+					if(map[row][col]=='G') return 2;
+				}
+			}
+		}
+		return result;
+	}
 }
 
 /**
