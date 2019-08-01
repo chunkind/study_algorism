@@ -2,34 +2,36 @@ package sw.day04.sw5215;
 
 import java.util.Scanner;
 
-public class 햄버거_다이어트 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int T = sc.nextInt();
-		for(int tc=1; tc<=T; tc++) {
-			int N = sc.nextInt(), L = sc.nextInt();
-			int[] Ti = new int[N], Ki = new int[N];
-			for(int i=0; i<N; i++) {
-				Ti[i] = sc.nextInt();
-				Ki[i] = sc.nextInt();
-			}
-			
-			int maxScr = 0;
-			for(int i=0; i<N; i++) {
-				int sumScr = 0, sumCal = 0;
-				for(int j=0; j<N; j++) {
-					if(i >= j) {
-						sumScr += Ti[j];
-						sumCal += Ki[j];
-					}else {
-						if((Ki[j]+sumCal) <= L && (Ti[j]+sumScr) > maxScr) maxScr = Ti[j]+sumScr;
-					}
-				}
-			}
-			System.out.printf("#%d %d\n", tc, maxScr);
-			
-		}
-	}
+public class 햄버거_다이어트3 {
+	static int N, L, maxScr;
+    static int[] Ti, Ki;
+    public static void solve(int sumScr, int sumCal, int k) {
+        if(k+1 > N) {
+            if( sumCal <= L && sumScr > maxScr ) maxScr = sumScr;
+            return;
+        }
+        solve(sumScr, sumCal, k+1);
+        solve(sumScr+Ti[k], sumCal+Ki[k], k+1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+ 
+        for(int tc=1; tc<=T; tc++) {
+            N = sc.nextInt();
+            L = sc.nextInt();
+            maxScr = 0;
+            Ti = new int[N];
+            Ki = new int[N];
+            for(int i=0; i<N; i++) {
+            	Ti[i] = sc.nextInt();
+            	Ki[i] = sc.nextInt();
+            }
+            solve(0, 0, 0);
+            System.out.format("#%d %d\n", tc, maxScr);
+        }
+        sc.close();
+    }
 }
 /**
 평소 햄버거를 좋아하던 민기는 최근 부쩍 늘어난 살 때문에 걱정이 많다.
