@@ -3,7 +3,30 @@ package sw.day04.sw5215;
 import java.util.Scanner;
 
 public class 햄버거_다이어트2 {
-	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+	    for (int tc = 1; tc <= t; tc++) {
+	        int N = sc.nextInt(), K = sc.nextInt();
+	        int[] Ti = new int[N+1], Ki = new int[N+1];
+	        Ti[0] = 0; Ki[0] = 0;
+	        for (int i = 1; i <= N; i++) {
+	            Ti[i] = sc.nextInt(); Ki[i] = sc.nextInt();
+	        }
+	        int[][] opt = new int[N+1][K+1];
+	        opt[0][0] = 0;
+	        for (int i = 0; i <= K; i++) opt[0][i] = 0;
+	        for (int i = 1; i <= N; i++) {
+	            for (int j = 0; j <= K; j++) {
+	                if (Ki[i] > j)
+	                    opt[i][j] = opt[i - 1][j];
+	                else
+	                    opt[i][j] = ((opt[i - 1][j] >= (opt[i - 1][j - Ki[i]] + Ti[i])) ? opt[i - 1][j] : ((opt[i - 1][j - Ki[i]]) + Ti[i]));
+	            }
+	        }
+	        System.out.printf("#%d %d\n", tc, opt[N][K]);
+	    }
+	}
 }
 /**
 #include <stdio.h>
