@@ -17,13 +17,29 @@ public class 스도쿠_검증 {
 				for(int j=0; j<map[i].length; j++) {
 					rowSum += map[i][j];
 					colSum += map[j][i];
-					pagSum += map[(i+(j/3))%3][j%3];
+					pagSum += map[(i/3)*3+(j/3)][((i%3)*3)+j%3];
 				}
 				if(rowSum==45 && colSum==45 && pagSum==45) result = 1;
 			}
 			System.out.printf("#%d %d\n", tc, result);
 		}
 	}
+	
+	
+
+	
+	
+	
+	
+	
+//	public static void main(String[] args) {
+//		for(int i=0; i<9; i++) {
+//			System.out.println();
+//			for(int j=0; j<9; j++) {
+//				System.out.print("["+((i/3)*3+(j/3))+","+(((i%3)*3)+j%3)+"]");
+//			}
+//		}
+//	}
 }
 /*
 스도쿠는 숫자퍼즐로, 가로 9칸 세로 9칸으로 이루어져 있는 
