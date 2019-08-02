@@ -7,7 +7,7 @@ public class 스도쿠_검증 {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
 		for(int tc=1; tc<=T; tc++) {
-			int result = 0;
+			int result = 1;
 			int[][] map = new int[9][9];
 			for(int i=0; i<map.length; i++)
 				for(int j=0; j<map[i].length; j++)
@@ -19,7 +19,10 @@ public class 스도쿠_검증 {
 					colSum += map[j][i];
 					pagSum += map[(i/3)*3+(j/3)][((i%3)*3)+j%3];
 				}
-				if(rowSum==45 && colSum==45 && pagSum==45) result = 1;
+				if(rowSum!=45 || colSum!=45 || pagSum!=45) {
+					result = 0;
+					break;
+				}
 			}
 			System.out.printf("#%d %d\n", tc, result);
 		}
