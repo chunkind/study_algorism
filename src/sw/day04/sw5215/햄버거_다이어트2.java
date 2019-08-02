@@ -19,9 +19,9 @@ public class 햄버거_다이어트2 {
 	        for (int i = 1; i <= N; i++) {
 	            for (int j = 0; j <= K; j++) {
 	                if (Ki[i] > j)
-	                    opt[i][j] = opt[i - 1][j];
+	                    opt[i][j] = opt[i-1][j];
 	                else
-	                    opt[i][j] = ((opt[i - 1][j] >= (opt[i - 1][j - Ki[i]] + Ti[i])) ? opt[i - 1][j] : ((opt[i - 1][j - Ki[i]]) + Ti[i]));
+	                    opt[i][j] = ((opt[i-1][j] >= (opt[i-1][j-Ki[i]]+Ti[i]))? opt[i-1][j]:((opt[i-1][j-Ki[i]])+Ti[i]));
 	            }
 	        }
 	        System.out.printf("#%d %d\n", tc, opt[N][K]);
