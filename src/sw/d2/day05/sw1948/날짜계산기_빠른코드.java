@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * @author ck
  * 21,940 kb / 67 ms / 1,126
  */
-public class 날짜계산기_가장빠른코드{
+public class 날짜계산기_빠른코드{
 	public static void main(String[] args)throws IOException{
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st=null;
