@@ -14,17 +14,24 @@ public class 간단한압축풀기 {
 			int n = Integer.parseInt(br.readLine());
 			String[] ci = new String[n];
 			int[] ki = new int[n];
+			int cnt = 0;
 			for(int i=0; i<n; i++) {
 				st = new StringTokenizer(br.readLine());
 				ci[i] = st.nextToken();
 				ki[i] = Integer.parseInt(st.nextToken());
 			}
-			System.out.printf("#%d\n");
+			System.out.printf("#%d\n", tc);
 			for(int i=0; i<ki.length; i++) {
 				for(int j=0; j<ki[i]; j++) {
+					cnt++;
 					System.out.printf("%s", ci[i]);
+					if(cnt == 10) {
+						System.out.println();
+						cnt = 0;
+					}
 				}
 			}
+			System.out.println();
 		}
 	}
 }
